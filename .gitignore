@@ -1,0 +1,9 @@
+*.swp
+*.bak
+*~
+~*
+*Thumbs.db
+*tar.gz
+*.svn
+logs/*
+*.DS_Store
