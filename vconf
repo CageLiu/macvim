@@ -7,6 +7,13 @@ set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,latin1
 source $VIMRUNTIME/delmenu.vim 
 source $VIMRUNTIME/menu.vim 
 
+"配置vim文件主目录
+if has("unix")
+	let $VIMFILES=$HOME."/.vim"
+else
+	let $VIMFILES=$VIM."/vimfiles"
+endif
+
 "处理consle输出乱码 
 language messages zh_CN.utf-8
 
@@ -18,7 +25,12 @@ set nocompatible
 
 "配色方案
 color blue
-""set guifont=DejaVu\ Sans\ Mono
+"color solarized
+"set guifont=DejaVu\ Sans\ Mono
+
+"the theme solarized
+"set background=dark
+"colorscheme solarized
 
 "默认区分大小写
 set noignorecase
@@ -169,11 +181,18 @@ vmap k gk
 let html_use_css=1
 
 " 设置字典 ~/.vim/dict/文件的路径
-autocmd filetype javascript set dictionary=~/.vim/dict/javascript.dict,~/.vim/dict/word.dict
-autocmd filetype php set dictionary=~/.vim/dict/php.dict,~/.vim/dict/word.dict
-autocmd filetype html set dictionary=~/.vim/dict/html.dict,~/.vim/dict/word.dict
-autocmd filetype css set dictionary=~/.vim/dict/css.dict,~/.vim/dict/word.dict
-autocmd filetype python set dictionary=~/.vim/dict/python.dict,~/.vim/dict/word.dict
+set complete+=k
+autocmd filetype python set dictionary=$VIMFILES/dict/python.dict,$VIMFILES/dict/word.doct
+autocmd filetype javascript set dictionary=$VIMFILES/dict/javascript.dict,$VIMFILES/dict/word.doct
+autocmd filetype php set dictionary=$VIMFILES/dict/php.dict,$VIMFILES/dict/word.doct
+autocmd filetype html set dictionary=~/.vim/dict/html.dict,$VIMFILES/dict/word.doct
+autocmd filetype css set dictionary=$VIMFILES/dict/css.dict,$VIMFILES/dict/word.doct
+
+""autocmd filetype javascript set dictionary=~/.vim/dict/javascript.dict,~/.vim/dict/word.dict
+""autocmd filetype php set dictionary=~/.vim/dict/php.dict,~/.vim/dict/word.dict
+""autocmd filetype html set dictionary=~/.vim/dict/html.dict,~/.vim/dict/word.dict
+""autocmd filetype css set dictionary=~/.vim/dict/css.dict,~/.vim/dict/word.dict
+""autocmd filetype python set dictionary=~/.vim/dict/python.dict,~/.vim/dict/word.dict
 
 "自动补全插件-neocomplcache
 "let g:neocomplcache_enable_at_startup=1
@@ -225,3 +244,32 @@ function! InsertHtmlTag()
         :call cursor(save_cursor[1], save_cursor[2], save_cursor[3])
 endfunction
 		inoremap > <ESC>:call InsertHtmlTag()<CR>a
+
+
+
+
+"zencoding 快捷键
+let g:user_zen_settings = { 
+  \  'indentation' : '  ', 
+  \  'perl' : { 
+  \    'aliases' : { 
+  \      'req' : 'require ' 
+  \    }, 
+  \    'snippets' : { 
+  \      'use' : "use strict\nuse warnings\n\n", 
+  \      'warn' : "warn \"|\";", 
+  \    } 
+  \  } 
+  \} 
+  let g:user_zen_expandabbr_key = '<c-e>'
+  let g:use_zen_complete_tag = 1
+""nmap <c-e> <c-y>,
+""vmap <c-e> <c-y>,
+""inoremap <c-e> <c-y>,
+
+"让vim支持系统剪贴板
+vmap "+y :w !pbcopy<CR><CR>
+nmap "+p :r !pbpaste<CR><CR>
+
+"pathogen
+call pathogen#infect()
