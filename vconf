@@ -168,7 +168,7 @@ set laststatus=2
 "normal模式下的快捷键
 nmap j gj
 nmap k gk
-"nmap <tab> <s-c-tab>
+nmap <s-tab> :bn<cr>
 
 "调整窗口大小
 nmap <s-k> <c-w>+5<c-w>+5<ESC>
@@ -238,15 +238,15 @@ if has("gui_running")
 endif
 
 "菜单栏隐藏与显示切换
-set guioptions-=m
-set guioptions-=T
-map <silent> <F2> :if &guioptions =~# 'T' <Bar>
-        \set guioptions-=T <Bar>
-        \set guioptions-=m <bar>
-    \else <Bar>
-        \set guioptions+=T <Bar>
-        \set guioptions+=m <Bar>
-    \endif<CR>
+"set guioptions-=m
+"set guioptions-=T
+"map <silent> <F2> :if &guioptions =~# 'T' <Bar>
+"        \set guioptions-=T <Bar>
+"        \set guioptions-=m <bar>
+"    \else <Bar>
+"        \set guioptions+=T <Bar>
+"        \set guioptions+=m <Bar>
+"    \endif<CR>
 
 "html标签自动补全
 function! InsertHtmlTag()
