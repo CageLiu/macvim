@@ -39,7 +39,7 @@ set noignorecase
 set history =1000
 
 "禁用鼠标
-set mouse=a
+set mouse=
 
 "设定退格键和delete键
 set backspace=indent,eol,start
@@ -148,6 +148,8 @@ inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 inoremap <c-k> <C-X><C-K>
 inoremap <c-f> <C-X><C-F>
+inoremap <c-a> <left>
+inoremap <c-d> <right>
 
 "实现括号的自动配对后防止重复输入），适用python
 function! ClosePair(char)
@@ -161,13 +163,31 @@ endf
 "显示状态栏
 set laststatus=2
 
-"状态栏显示的信息
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
+"状态栏显示的信息 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
 
 "normal模式下的快捷键
 nmap j gj
 nmap k gk
-nmap <tab> <s-c-tab>
+"nmap <tab> <s-c-tab>
+
+"调整窗口大小
+nmap <s-k> <c-w>+5<c-w>+5<ESC>
+nmap <s-j> <c-w>-5<c-w>-5<ESC>
+nmap <s-h> <c-w>>5<c-w>>5<ESC>
+nmap <s-l> <c-w><5<c-w><5<ESC>
+nmap <s-m> <c-w>>2000<c-w>>2000<ESC>
+
+"窗口切换
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
+
+"展开折叠
+nmap <c-i> zR
+
+"选中标签
+nmap <c-t> $V\5
 
 "重复find操作
 nmap , ;
