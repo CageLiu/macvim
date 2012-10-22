@@ -171,10 +171,10 @@ nmap k gk
 nmap <s-tab> :bn<cr>
 
 "调整窗口大小
-nmap <s-k> <c-w>+5<c-w>+5<ESC>
-nmap <s-j> <c-w>-5<c-w>-5<ESC>
-nmap <s-h> <c-w>>5<c-w>>5<ESC>
-nmap <s-l> <c-w><5<c-w><5<ESC>
+nmap <s-up> <c-w>+5<c-w>+5<ESC>
+nmap <s-down> <c-w>-5<c-w>-5<ESC>
+nmap <s-left> <c-w>>5<c-w>>5<ESC>
+nmap <s-right> <c-w><5<c-w><5<ESC>
 nmap <s-m> <c-w>>2000<c-w>>2000<ESC>
 
 "窗口切换
