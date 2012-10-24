@@ -7,3 +7,4 @@
 *.svn
 logs/*
 *.DS_Store
+.netrwhist
