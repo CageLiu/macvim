@@ -24,7 +24,8 @@ set ambiwidth=double
 set nocompatible
 
 "配色方案
-color blue
+color molokai
+"color blue
 "color solarized
 "set guifont=DejaVu\ Sans\ Mono
 
@@ -293,3 +294,6 @@ nmap "+p :r !pbpaste<CR><CR>
 
 "pathogen
 call pathogen#infect()
+
+set cursorline
+set cursorcolumn
