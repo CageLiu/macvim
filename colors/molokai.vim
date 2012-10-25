@@ -183,7 +183,7 @@ if &t_Co > 255
    hi SignColumn      ctermfg=118 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=none
    hi SpecialComment  ctermfg=245               cterm=none
-   hi Special         ctermfg=81  ctermbg=232
+   hi Special         ctermfg=131  ctermbg=232
    hi SpecialKey      ctermfg=245
 
    hi Statement       ctermfg=161               cterm=none
@@ -195,8 +195,8 @@ if &t_Co > 255
    hi Title           ctermfg=166
    hi Todo            ctermfg=231 ctermbg=232   cterm=none
 
-   hi Typedef         ctermfg=81
-   hi Type            ctermfg=81                cterm=none
+   hi Typedef         ctermfg=131
+   hi Type            ctermfg=131                cterm=none
    hi Underlined      ctermfg=244               cterm=none
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=none
