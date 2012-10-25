@@ -158,7 +158,7 @@ if &t_Co > 255
    hi IncSearch       ctermfg=193 ctermbg=16
 
    hi Keyword         ctermfg=161               cterm=none
-   hi Label           ctermfg=229               cterm=none
+   hi Label           ctermfg=23               cterm=none
    hi Macro           ctermfg=193
    hi SpecialKey      ctermfg=81
 
@@ -169,12 +169,12 @@ if &t_Co > 255
 
    " complete menu
    hi Pmenu           ctermfg=231  ctermbg=16
-   hi PmenuSel                    ctermbg=27
-   hi PmenuSbar                   ctermbg=27
+   hi PmenuSel                     ctermbg=27
+   hi PmenuSbar                    ctermbg=27
    hi PmenuThumb      ctermfg=123
 
    hi PreCondit       ctermfg=118               cterm=none
-   hi PreProc         ctermfg=118
+   hi PreProc         ctermfg=23
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=none
    hi Search          ctermfg=231 ctermbg=1
@@ -203,9 +203,9 @@ if &t_Co > 255
    hi VisualNOS                   ctermbg=238
    hi Visual                      ctermbg=235
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=none
-   hi WildMenu        ctermfg=239  ctermbg=16
+   hi WildMenu        ctermfg=239 ctermbg=16
 
-   hi Normal          ctermfg=252 ctermbg=16
+   hi Normal          ctermfg=60  ctermbg=16
    hi Comment         ctermfg=236
    hi CursorLine       			  ctermbg=232   cterm=none
    hi CursorColumn                ctermbg=232
