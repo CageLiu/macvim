@@ -149,8 +149,11 @@ inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 inoremap <c-k> <C-X><C-K>
 inoremap <c-f> <C-X><C-F>
-inoremap <c-a> <left>
-inoremap <c-d> <right>
+
+inoremap <c-a> <up>
+inoremap <c-d> <down>
+inoremap <silent> <F1> <left>
+inoremap <silent> <F2> <right>
 
 "实现括号的自动配对后防止重复输入），适用python
 function! ClosePair(char)
