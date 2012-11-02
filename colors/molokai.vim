@@ -183,7 +183,7 @@ if &t_Co > 255
    hi SignColumn      ctermfg=118 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=none
    hi SpecialComment  ctermfg=245               cterm=none
-   hi Special         ctermfg=131  ctermbg=232
+   hi Special         ctermfg=131 ctermbg=232
    hi SpecialKey      ctermfg=245
 
    hi Statement       ctermfg=161               cterm=none
@@ -196,7 +196,7 @@ if &t_Co > 255
    hi Todo            ctermfg=231 ctermbg=232   cterm=none
 
    hi Typedef         ctermfg=131
-   hi Type            ctermfg=131                cterm=none
+   hi Type            ctermfg=131               cterm=none
    hi Underlined      ctermfg=244               cterm=none
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=none
@@ -205,8 +205,8 @@ if &t_Co > 255
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=none
    hi WildMenu        ctermfg=239 ctermbg=16
 
-   hi Normal          ctermfg=60  ctermbg=16
-   hi Comment         ctermfg=236
+   hi Normal          ctermfg=60  ctermbg=16	cterm=none
+   hi Comment         ctermfg=236				
    hi CursorLine       			  ctermbg=232   cterm=none
    hi CursorColumn                ctermbg=232
    hi LineNr          ctermfg=231 ctermbg=233
