@@ -152,8 +152,8 @@ inoremap <c-f> <C-X><C-F>
 
 inoremap <c-a> <up>
 inoremap <c-d> <down>
-inoremap <silent> <F1> <left>
-inoremap <silent> <F2> <right>
+inoremap <c-h> <left>
+inoremap <c-l> <right>
 
 "实现括号的自动配对后防止重复输入），适用python
 function! ClosePair(char)
@@ -180,6 +180,9 @@ nmap <s-down> <c-w>-5<c-w>-5<ESC>
 nmap <s-left> <c-w>>5<c-w>>5<ESC>
 nmap <s-right> <c-w><5<c-w><5<ESC>
 nmap <s-m> <c-w>>2000<c-w>>2000<ESC>
+
+nmap <silent> <F1> <c-w>>5<c-w>>5<ESC>
+nmap <silent> <F2> <c-w><5<c-w><5<ESC>
 
 "窗口切换
 nmap <c-h> <c-w>h
