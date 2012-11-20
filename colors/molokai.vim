@@ -162,12 +162,14 @@ if &t_Co > 255
    hi Macro           ctermfg=193
    hi SpecialKey      ctermfg=81
 
-   hi MatchParen      ctermfg=16  ctermbg=208 cterm=none
+   "html匹配到的标签着色
+   hi MatchParen      ctermfg=231  ctermbg=125 cterm=bold,underline
+
    hi ModeMsg         ctermfg=229
    hi MoreMsg         ctermfg=229
    hi Operator        ctermfg=161
 
-   " complete menu
+   " complete menu(补全菜单)
    hi Pmenu           ctermfg=231  ctermbg=16
    hi PmenuSel        ctermfg=231  ctermbg=27
    hi PmenuSbar                    ctermbg=27
