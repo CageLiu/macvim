@@ -147,27 +147,21 @@ inoremap [ []<ESC>i
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
-inoremap <c-k> <C-X><C-K>
-inoremap <c-f> <C-X><C-F>
+"inoremap <c-k> <C-X><C-K>
+inoremap <c-d> <C-X><C-F>
 
-inoremap <c-a> <up>
-inoremap <c-d> <down>
-inoremap <c-h> <left>
-inoremap <c-l> <right>
+inoremap <c-k> <up>
+inoremap <c-j> <down>
+inoremap <c-b> <left>
+inoremap <c-f> <right>
+inoremap <c-h> <ESC>I
+inoremap <c-l> <ESC>A
 
-"实现括号的自动配对后防止重复输入），适用python
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endf
-
-"显示状态栏
-set laststatus=2
-
-"状态栏显示的信息 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
+"窗口切换
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
 
 "normal模式下的快捷键
 nmap j gj
@@ -183,12 +177,6 @@ nmap <s-m> <c-w>>2000<c-w>>2000<ESC>
 
 nmap <silent> <F1> <c-w>>5<c-w>>5<ESC>
 nmap <silent> <F2> <c-w><5<c-w><5<ESC>
-
-"窗口切换
-nmap <c-h> <c-w>h
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
 
 "展开折叠
 nmap <c-i> zR
@@ -207,6 +195,20 @@ vmap k gk
 "复制粘贴
 vmap <c-y> "+y
 nmap <c-p> "+p
+
+"实现括号的自动配对后防止重复输入），适用python
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endf
+
+"显示状态栏
+set laststatus=2
+
+"状态栏显示的信息 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
 
 " 让 Tohtml 产生有 CSS 语法的 html
 let html_use_css=1
