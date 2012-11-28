@@ -131,42 +131,55 @@ end
 if &t_Co > 255
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
-   hi Number          ctermfg=135
+
+   "数字
+   hi Number          ctermfg=135				cterm=bold
 
    "字符串
    hi String          ctermfg=60
 
-   hi Conditional     ctermfg=161               cterm=none
+   "条件
+   hi Conditional     ctermfg=161               cterm=bold
+
    hi Constant        ctermfg=135               cterm=none
+
    hi Cursor          ctermfg=16  ctermbg=253
    hi Debug           ctermfg=225               cterm=none
    hi Define          ctermfg=81
    hi Delimiter       ctermfg=241
 
-   hi DiffAdd                     ctermbg=24
-   hi DiffChange      ctermfg=181 ctermbg=239
-   hi DiffDelete      ctermfg=162 ctermbg=53
-   hi DiffText                    ctermbg=102 cterm=none
+   hi DiffAdd         ctermfg=231 ctermbg=1
+   hi DiffChange      ctermfg=231 ctermbg=202
+   hi DiffDelete      ctermfg=231 ctermbg=53
+   hi DiffText        ctermfg=231 ctermbg=21 cterm=none
 
    hi Directory       ctermfg=118               cterm=none
    hi Error           ctermfg=219 ctermbg=89
    hi ErrorMsg        ctermfg=199 ctermbg=16    cterm=none
-   hi Exception       ctermfg=118               cterm=none
+
+   "异常
+   hi Exception       ctermfg=118               cterm=bold
+
    hi Float           ctermfg=135
+
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
 
    "html开始标签箭头
-   hi Function        ctermfg=25
+   hi Function        ctermfg=25	cterm=bold
 
    "html标签结束箭头
-   hi Identifier      ctermfg=25
+   hi Identifier      ctermfg=25	cterm=bold
 
    hi Ignore          ctermfg=244 ctermbg=232
    hi IncSearch       ctermfg=193 ctermbg=16
 
-   hi Keyword         ctermfg=161               cterm=none
-   hi Label           ctermfg=23               cterm=none
+   "关键字，js中的 document 等
+   hi Keyword         ctermfg=161               cterm=bold
+
+   "js属性名
+   hi Label           ctermfg=23               cterm=bold
+
    hi Macro           ctermfg=193
    hi SpecialKey      ctermfg=81
 
@@ -175,7 +188,9 @@ if &t_Co > 255
 
    hi ModeMsg         ctermfg=229
    hi MoreMsg         ctermfg=229
-   hi Operator        ctermfg=161
+
+   "运算符
+   hi Operator        ctermfg=161	cterm=bold
 
    " complete menu(补全菜单)
    hi Pmenu           ctermfg=231  ctermbg=16
@@ -184,9 +199,13 @@ if &t_Co > 255
    hi PmenuThumb      ctermfg=123
 
    hi PreCondit       ctermfg=118               cterm=none
-   hi PreProc         ctermfg=23
+
+   "getElementsByTagName
+   hi PreProc         ctermfg=23				cterm=bold
    hi Question        ctermfg=81
-   hi Repeat          ctermfg=161               cterm=none
+
+   "循环
+   hi Repeat          ctermfg=161               cterm=bold
 
    "搜索结果
    hi Search          ctermfg=231 ctermbg=1
@@ -199,14 +218,16 @@ if &t_Co > 255
    hi SpecialKey      ctermfg=245
 
    "html标签
-   hi Statement       ctermfg=25               cterm=none
+   hi Statement       ctermfg=25               cterm=bold
 
    "状态栏
    hi StatusLine      ctermfg=238 ctermbg=253
 
    hi StatusLineNC    ctermfg=244 ctermbg=232
 
-   hi StorageClass    ctermfg=208
+   "CSS属性名
+   hi StorageClass    ctermfg=61				cterm=bold
+
    hi Structure       ctermfg=81
    hi Tag             ctermfg=161
    hi Title           ctermfg=166
@@ -215,7 +236,7 @@ if &t_Co > 255
    hi Typedef         ctermfg=131
 
    "html属性名
-   hi Type            ctermfg=30               cterm=none
+   hi Type            ctermfg=23               cterm=bold
 
    ""
    hi Underlined      ctermfg=244               cterm=none
@@ -227,6 +248,8 @@ if &t_Co > 255
    hi WildMenu        ctermfg=239 ctermbg=16
 
    hi Normal          ctermfg=247  ctermbg=16	cterm=none
+
+   "注释
    hi Comment         ctermfg=236				
 
    "水平cursorline
