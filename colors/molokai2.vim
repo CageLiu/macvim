@@ -132,10 +132,7 @@ if &t_Co > 255
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
    hi Number          ctermfg=135
-
-   "字符串
-   hi String          ctermfg=60
-
+   hi String          ctermfg=12
    hi Conditional     ctermfg=161               cterm=none
    hi Constant        ctermfg=135               cterm=none
    hi Cursor          ctermfg=16  ctermbg=253
@@ -155,13 +152,8 @@ if &t_Co > 255
    hi Float           ctermfg=135
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
-
-   "html开始标签箭头
-   hi Function        ctermfg=25
-
-   "html标签结束箭头
-   hi Identifier      ctermfg=25
-
+   hi Function        ctermfg=118
+   hi Identifier      ctermfg=208
    hi Ignore          ctermfg=244 ctermbg=232
    hi IncSearch       ctermfg=193 ctermbg=16
 
@@ -187,8 +179,6 @@ if &t_Co > 255
    hi PreProc         ctermfg=23
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=none
-
-   "搜索结果
    hi Search          ctermfg=231 ctermbg=1
 
    " marks column
@@ -198,14 +188,9 @@ if &t_Co > 255
    hi Special         ctermfg=131 ctermbg=232
    hi SpecialKey      ctermfg=245
 
-   "html标签
-   hi Statement       ctermfg=25               cterm=none
-
-   "状态栏
+   hi Statement       ctermfg=161               cterm=none
    hi StatusLine      ctermfg=238 ctermbg=253
-
    hi StatusLineNC    ctermfg=244 ctermbg=232
-
    hi StorageClass    ctermfg=208
    hi Structure       ctermfg=81
    hi Tag             ctermfg=161
@@ -213,11 +198,7 @@ if &t_Co > 255
    hi Todo            ctermfg=231 ctermbg=232   cterm=none
 
    hi Typedef         ctermfg=131
-
-   "html属性名
-   hi Type            ctermfg=30               cterm=none
-
-   ""
+   hi Type            ctermfg=131               cterm=none
    hi Underlined      ctermfg=244               cterm=none
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=none
@@ -226,15 +207,10 @@ if &t_Co > 255
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=none
    hi WildMenu        ctermfg=239 ctermbg=16
 
-   hi Normal          ctermfg=247  ctermbg=16	cterm=none
+   hi Normal          ctermfg=60  ctermbg=16	cterm=none
    hi Comment         ctermfg=236				
-
-   "水平cursorline
    hi CursorLine       			  ctermbg=232   cterm=none
-
-   "垂直cursorline
    hi CursorColumn                ctermbg=232
-
    hi LineNr          ctermfg=231 ctermbg=233
    hi NonText         ctermfg=250 ctermbg=234
 end
