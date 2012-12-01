@@ -148,21 +148,19 @@ inoremap [ []<ESC>i
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
-"inoremap <c-k> <C-X><C-K>
-inoremap <c-d> <C-X><C-F>
 
-inoremap <c-k> <up>
-inoremap <c-j> <down>
-inoremap <c-b> <left>
-inoremap <c-f> <right>
-inoremap <c-h> <ESC>I
-inoremap <c-l> <ESC>A
+"字典补全
+inoremap <c-k> <C-X><C-K>
+
+"文件补全
+inoremap <c-f> <C-X><C-F>
 
 "窗口切换
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
+nmap X d^
 
 "normal模式下的快捷键
 nmap j gj
@@ -178,12 +176,6 @@ nmap <s-m> <c-w>>2000<c-w>>2000<ESC>
 
 nmap <silent> <F1> <c-w>>5<c-w>>5<ESC>
 nmap <silent> <F2> <c-w><5<c-w><5<ESC>
-
-"展开折叠
-nmap <c-i> zR
-
-"选中标签
-nmap <c-t> $V\5
 
 "重复find操作
 nmap , ;
@@ -495,3 +487,88 @@ execute WatchForChanges("*",autoreadargs)
 "let g:Powerline_theme="skwp"
 "let g:Powerline_colorscheme="skwp"
 let g:Powerline_symbols = "fancy"
+
+
+"快速格式化缩进
+nmap //= :Tab /=<cr>
+nmap //: :Tab /:<cr>
+nmap //\| :Tab /\|<cr>
+nmap //, :Tab /,<cr>
+nmap //+ :Tab /+<cr>
+nmap //- :Tab /-<cr>
+vmap //= :Tab /=<cr>
+vmap //: :Tab /:<cr>
+vmap //\| :Tab /\|<cr>
+vmap //, :Tab /,<cr>
+vmap //+ :Tab /+<cr>
+vmap //- :Tab /-<cr>
+
+"插入当前日期
+nmap <silent> <F5> a<CR><ESC>k:r! date \+\%F\ \%T<CR>kJJ
+inoremap <silent> <F5> <CR><ESC>k:r! date \+\%F\ \%T<CR>kJJa
+
+"vimim词库位置
+let g:vimim_plugin="/Users/cage/Documents/data"
+"let g:vimim_mode='static'
+"let g:vimim_map='c-bslash'
+"
+
+"标签间跳转 Option-<
+nmap ≤  $\5
+vmap ≤  $\5
+
+"选中标签 Option->
+nmap ≥ $V\5
+
+"展开折叠 Option-r
+nmap ® zR
+
+"插入模式左移光标 Option-b
+inoremap ∫ <left>
+
+"插入模式右移光标 Option-f
+inoremap ƒ <right>
+  
+
+"插入模式上移光标 Option-k
+inoremap ˚ <up>
+nmap ˚ <up>
+
+"插入模式下移光标 Option-j
+inoremap ∆ <down>
+
+"在下方复制整个元素Option-j
+nmap ∆ ≥yP≤j
+
+"在上方复制整个元素Option-k
+nmap ˚ ≥yP
+
+"到行首Option-q
+inoremap œ <ESC>I
+nmap œ ^
+vmap œ ^
+
+"到行尾Option-p
+inoremap π <ESC>A
+nmap π $
+vmap π $
+
+"跳到结尾Option-g
+nmap © G
+
+"删除到行首
+inoremap <silent> <F1> <ESC>ld^i
+
+"删除到行尾
+inoremap <silent> <F2> <ESC>lC
+
+"括号间移动Option-'
+nmap æ %
+
+"上一个句子Option-9
+nmap ª (
+vmap ª (
+
+"下一个句子Option-0
+nmap º )
+vmap º )
