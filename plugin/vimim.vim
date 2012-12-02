@@ -2466,7 +2466,7 @@ endfunction
 
 function! s:vimim_get_cloud_google(keyboard)
     " http://google.com/transliterate?tl_app=3&tlqt=1&num=20&text=mxj
-    let input  = 'http://www.google.com/transliterate/chinese'
+    let input  = 'http://74.125.71.144/transliterate/chinese'
     let input .= '?langpair=en|zh' . '&num=20' . '&tl_app=3'
     let input .= '&tlqt=1' . '&text=' . a:keyboard
     let output = join(split(s:vimim_get_from_http(input,'google')))
@@ -3139,10 +3139,11 @@ endfunction
 " ============================================= }}}
 let s:VimIM += [" ====  core driver      ==== {{{"]
 " =================================================
+" ç
 
 function! s:vimim_plug_and_play()
-    nnoremap <silent> <C-_> i<C-R>=g:vimim_chinese()<CR><Esc>
-    inoremap <unique> <C-_>  <C-R>=g:vimim_chinese()<CR>
+    nnoremap <silent> ç i<C-R>=g:vimim_chinese()<CR><Esc>
+    inoremap <unique> ç  <C-R>=g:vimim_chinese()<CR>
     inoremap <silent> ¬  <C-R>=g:vimim_onekey()<CR>
     xnoremap <silent> ¬ y:call g:vimim_visual()<CR>
     if g:vimim_map !~ 'no-gi'
@@ -3153,19 +3154,19 @@ function! s:vimim_plug_and_play()
         nnoremap <silent> n :call g:vimim_search()<CR>n
     endif
     if g:vimim_map =~ 'c-Bslash'      " use Ctrl-\  ''
-        imap <C-bslash> <C-_>
-        nmap <C-bslash> <C-_>
+        imap <C-bslash> ç
+        nmap <C-bslash> ç
     elseif g:vimim_map =~ 'c-space'   " use Ctrl-Space
         if has("win32unix")
-            nmap <C-@> <C-_>
-            imap <C-@> <C-_>
+            nmap <C-@> ç
+            imap <C-@> ç
         else
-            imap <C-Space> <C-_>
-            nmap <C-Space> <C-_>
+            imap <C-Space> ç
+            nmap <C-Space> ç
         endif
     elseif g:vimim_map =~ 'm-space'   " use Alt-Space
-        imap <M-Space> <C-_>
-        nmap <M-Space> <C-_>
+        imap <M-Space> ç
+        nmap <M-Space> ç
     endif
     if g:vimim_map =~ 'tab'           " use Tab
         xmap <silent> <Tab> ¬

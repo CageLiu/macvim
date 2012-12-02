@@ -508,10 +508,13 @@ nmap <silent> <F5> a<CR><ESC>k:r! date \+\%F\ \%T<CR>kJJ
 inoremap <silent> <F5> <CR><ESC>k:r! date \+\%F\ \%T<CR>kJJa
 
 "vimim词库位置
-let g:vimim_plugin="/Users/cage/Documents/data"
+"let g:vimim_plugin="/Users/cage/Documents/data"
 "let g:vimim_mode='static'
 "let g:vimim_map='c-bslash'
-"
+"let g:vimim_cloud='qq.fuzzy'
+let g:vimim_cloud='google'
+let g:vimim_map='no-gi'
+"let g:vimim_cloud='sogou'
 
 "标签间跳转 Option-<
 nmap ≤  $\5
@@ -557,7 +560,7 @@ vmap π $
 nmap © G
 
 "删除到行首
-inoremap <silent> <F1> <ESC>ld^i
+inoremap <silent> <F1> <ESC>v^c
 
 "删除到行尾
 inoremap <silent> <F2> <ESC>lC
