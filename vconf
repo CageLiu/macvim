@@ -577,4 +577,5 @@ nmap º )
 vmap º )
 
 "下翻屏Option-d
-nmap ∂ <c-d>
+nmap ≈ <c-d>
+nmap µ 	<c-u>
