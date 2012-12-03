@@ -575,3 +575,6 @@ vmap ª (
 "下一个句子Option-0
 nmap º )
 vmap º )
+
+"下翻屏Option-d
+nmap ∂ <c-d>
