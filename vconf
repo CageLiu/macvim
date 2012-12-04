@@ -576,6 +576,14 @@ vmap ª (
 nmap º )
 vmap º )
 
-"下翻屏Option-d
+"下翻半屏Option-d
 nmap ≈ <c-d>
+
+"上翻半屏Option-d
 nmap µ 	<c-u>
+
+"下翻半屏Option-d
+inoremap ≈ <ESC>o
+
+"上翻半屏Option-d
+inoremap µ 	<ESC>O
