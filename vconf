@@ -578,12 +578,14 @@ vmap º )
 
 "下翻半屏Option-d
 nmap ≈ <c-d>
+vmap ≈ <c-d>
 
 "上翻半屏Option-d
 nmap µ 	<c-u>
+vmap µ 	<c-u>
 
-"下翻半屏Option-d
+"上一行进入插入模式 Option-d
 inoremap ≈ <ESC>o
 
-"上翻半屏Option-d
+"下一行进入插入模式 Option-d
 inoremap µ 	<ESC>O
