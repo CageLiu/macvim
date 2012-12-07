@@ -37,6 +37,8 @@ call Pl#Hi#Allocate({
 	\ 'gray8'          : 247,
 	\ 'gray9'          : 250,
 	\ 'gray10'         : 252,
+	\ 'red'            : 1,
+	\ 'blk'            : 16,
 	\ })
 
 let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
@@ -90,8 +92,8 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['lineinfo'], {
-		\ 'n': ['gray2', 'gray10', ['bold']],
-		\ 'N': ['gray7', 'gray1', ['bold']],
+		\ 'n': ['darkestcyan', 'gray10', ['bold']],
+		\ 'N': ['darkestcyan', 'gray1', ['bold']],
 		\ 'i': ['darkestcyan', 'mediumcyan', ['bold']],
 		\ }),
 	\
@@ -101,8 +103,8 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['lineinfo.line.tot'], {
-		\ 'n': ['gray6'],
-		\ 'N': ['gray5'],
+		\ 'n': ['red'],
+		\ 'N': ['red'],
 		\ 'i': ['darkestcyan'],
 		\ }),
 	\

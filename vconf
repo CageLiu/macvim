@@ -160,7 +160,7 @@ nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
-nmap X d^
+nmap X ld^
 
 "normal模式下的快捷键
 nmap j gj
@@ -558,6 +558,7 @@ vmap π $
 
 "跳到结尾Option-g
 nmap © G
+vmap © G
 
 "删除到行首
 inoremap <silent> <F1> <ESC>v^c
@@ -567,6 +568,7 @@ inoremap <silent> <F2> <ESC>lC
 
 "括号间移动Option-'
 nmap æ %
+vmap æ %
 
 "上一个句子Option-9
 nmap ª (
@@ -589,3 +591,6 @@ inoremap ≈ <ESC>o
 
 "下一行进入插入模式 Option-d
 inoremap µ 	<ESC>O
+
+nmap gt Gzt
+nmap gb Gzz
