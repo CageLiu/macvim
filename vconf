@@ -156,10 +156,12 @@ inoremap <c-k> <C-X><C-K>
 inoremap <c-f> <C-X><C-F>
 
 "窗口切换
-nmap <c-h> <c-w>h
+"nmap <c-h> <c-w>h
+nmap ˙    <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
+"nmap <c-l> <c-w>l
+nmap ¬     <c-w>l
 nmap X ld^
 
 "normal模式下的快捷键

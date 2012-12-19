@@ -3144,11 +3144,11 @@ let s:VimIM += [" ====  core driver      ==== {{{"]
 function! s:vimim_plug_and_play()
     nnoremap <silent> ç i<C-R>=g:vimim_chinese()<CR><Esc>
     inoremap <unique> ç  <C-R>=g:vimim_chinese()<CR>
-    inoremap <silent> ¬  <C-R>=g:vimim_onekey()<CR>
-    xnoremap <silent> ¬ y:call g:vimim_visual()<CR>
+    inoremap <silent> ≤  <C-R>=g:vimim_onekey()<CR>
+    xnoremap <silent> ≤ y:call g:vimim_visual()<CR>
     if g:vimim_map !~ 'no-gi'
         nnoremap <silent> gi a<C-R>=g:vimim_gi()<CR>
-            xmap <silent> gi  ¬
+            xmap <silent> gi  ≤
     endif
     if g:vimim_map !~ 'no-search'
         nnoremap <silent> n :call g:vimim_search()<CR>n
@@ -3169,7 +3169,7 @@ function! s:vimim_plug_and_play()
         nmap <M-Space> ç
     endif
     if g:vimim_map =~ 'tab'           " use Tab
-        xmap <silent> <Tab> ¬
+        xmap <silent> <Tab> ≤
         if g:vimim_map =~ 'tab_as_gi'
             inoremap <silent> <Tab> <C-R>=g:vimim_tab(1)<CR>
         elseif g:vimim_map =~ 'tab_as_onekey'
