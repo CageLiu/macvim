@@ -890,3 +890,4 @@ trim
 param
 querySelector
 querySelectorAll
+currentStyle

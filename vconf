@@ -210,11 +210,13 @@ let html_use_css=1
 
 " 设置字典 ~/.vim/dict/文件的路径
 set complete+=k
-autocmd filetype python set dictionary=$VIMFILES/dict/python.dict,$VIMFILES/dict/word.doct
-autocmd filetype javascript set dictionary=$VIMFILES/dict/javascript.dict,$VIMFILES/dict/word.doct
-autocmd filetype php set dictionary=$VIMFILES/dict/php.dict,$VIMFILES/dict/word.doct
-autocmd filetype html set dictionary=~/.vim/dict/html.dict,$VIMFILES/dict/word.doct
-autocmd filetype css set dictionary=$VIMFILES/dict/css.dict,$VIMFILES/dict/word.doct
+autocmd filetype python set dictionary=$VIMFILES/dict/python.dict
+autocmd filetype javascript set dictionary=$VIMFILES/dict/javascript.dict
+autocmd filetype javascript set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
+autocmd filetype html set dictionary=$VIMFILES/dict/html.dict
+autocmd filetype html set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype css set dictionary=$VIMFILES/dict/css.dict
 
 ""autocmd filetype javascript set dictionary=~/.vim/dict/javascript.dict,~/.vim/dict/word.dict
 ""autocmd filetype php set dictionary=~/.vim/dict/php.dict,~/.vim/dict/word.dict
@@ -596,3 +598,9 @@ inoremap µ 	<ESC>O
 
 nmap gt Gzt
 nmap gb Gzz
+
+if has("gui_running") 
+	highlight SpellBad term=underline gui=undercurl guisp=Black
+else
+	highlight SpellBad ctermfg=124 ctermbg=16 cterm=bold
+endif
