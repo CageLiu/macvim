@@ -155,14 +155,6 @@ inoremap <c-k> <C-X><C-K>
 "文件补全
 inoremap <c-f> <C-X><C-F>
 
-"窗口切换
-"nmap <c-h> <c-w>h
-nmap ˙    <c-w>h
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-"nmap <c-l> <c-w>l
-nmap ¬     <c-w>l
-nmap X ld^
 
 "normal模式下的快捷键
 nmap j gj
@@ -216,6 +208,8 @@ autocmd filetype javascript set dictionary+=$VIMFILES/dict/node.dict
 autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
 autocmd filetype html set dictionary=$VIMFILES/dict/html.dict
 autocmd filetype html set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype html set dictionary=$VIMFILES/dict/javascript.dict
+autocmd filetype html set dictionary+=$VIMFILES/dict/node.dict
 autocmd filetype css set dictionary=$VIMFILES/dict/css.dict
 
 ""autocmd filetype javascript set dictionary=~/.vim/dict/javascript.dict,~/.vim/dict/word.dict
@@ -516,9 +510,25 @@ inoremap <silent> <F5> <CR><ESC>k:r! date \+\%F\ \%T<CR>kJJa
 "let g:vimim_mode='static'
 "let g:vimim_map='c-bslash'
 "let g:vimim_cloud='qq.fuzzy'
-let g:vimim_cloud='google'
+let g:vimim_cloud='sougo'
 let g:vimim_map='no-gi'
 "let g:vimim_cloud='sogou'
+
+"窗口切换
+nmap ˙    <c-w>h
+"nmap <c-h> <c-w>h
+nmap  ∆		<c-w>j
+"nmap <c-j> <c-w>j
+nmap  ˚	<c-w>k
+"nmap <c-k> <c-w>k
+nmap ¬     <c-w>l
+"nmap <c-l> <c-w>l
+
+"在下方复制整个元素Option-o
+nmap ø  ≥yP≤j
+
+"在上方复制整个元素Option-O
+nmap Ø  ≥yP
 
 "标签间跳转 Option-<
 nmap ≤  $\5
@@ -526,6 +536,7 @@ vmap ≤  $\5
 
 "选中标签 Option->
 nmap ≥ $V\5
+
 
 "展开折叠 Option-r
 nmap ® zR
@@ -535,20 +546,17 @@ inoremap ∫ <left>
 
 "插入模式右移光标 Option-f
 inoremap ƒ <right>
-  
+
+"删除到行首
+nmap X ld^
 
 "插入模式上移光标 Option-k
 inoremap ˚ <up>
-nmap ˚ <up>
 
 "插入模式下移光标 Option-j
 inoremap ∆ <down>
 
-"在下方复制整个元素Option-j
-nmap ∆ ≥yP≤j
 
-"在上方复制整个元素Option-k
-nmap ˚ ≥yP
 
 "到行首Option-q
 inoremap œ <ESC>I
@@ -582,23 +590,24 @@ vmap ª (
 nmap º )
 vmap º )
 
-"下翻半屏Option-d
+"下翻半屏Option-x
 nmap ≈ <c-d>
 vmap ≈ <c-d>
 
-"上翻半屏Option-d
+"上翻半屏Option-m
 nmap µ 	<c-u>
 vmap µ 	<c-u>
 
-"上一行进入插入模式 Option-d
+"上一行进入插入模式 Option-x
 inoremap ≈ <ESC>o
 
-"下一行进入插入模式 Option-d
+"下一行进入插入模式 Option-m
 inoremap µ 	<ESC>O
 
 nmap gt Gzt
 nmap gb Gzz
 
+"python语法错误着色
 if has("gui_running") 
 	highlight SpellBad term=underline gui=undercurl guisp=Black
 else
