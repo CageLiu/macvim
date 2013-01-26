@@ -30,6 +30,9 @@ color molokai
 "color solarized
 "set guifont=DejaVu\ Sans\ Mono
 
+"pathogen
+call pathogen#infect()
+
 "the theme solarized
 "set background=dark
 "colorscheme solarized
@@ -295,9 +298,6 @@ let g:user_zen_settings = {
 vmap "+y :w !pbcopy<CR><CR>
 nmap "+p :r !pbpaste<CR><CR>
 
-"pathogen
-call pathogen#infect()
-
 set cursorline
 set cursorcolumn
 
@@ -509,8 +509,8 @@ inoremap <silent> <F5> <CR><ESC>k:r! date \+\%F\ \%T<CR>kJJa
 "let g:vimim_plugin="/Users/cage/Documents/data"
 "let g:vimim_mode='static'
 "let g:vimim_map='c-bslash'
-"let g:vimim_cloud='qq.fuzzy'
-let g:vimim_cloud='sougo'
+let g:vimim_cloud='qq.fuzzy'
+"let g:vimim_cloud='sougo'
 let g:vimim_map='no-gi'
 "let g:vimim_cloud='sogou'
 
@@ -613,3 +613,10 @@ if has("gui_running")
 else
 	highlight SpellBad ctermfg=124 ctermbg=16 cterm=bold
 endif
+
+"syntastic icon
+let g:syntastic_error_symbol='↪'
+let g:syntastic_style_error_symbol='↪'
+let g:syntastic_warning_symbol='↪'
+let g:syntastic_style_warning_symbol='↪'
+let g:syntastic_auto_jump=1
