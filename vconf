@@ -206,20 +206,26 @@ let html_use_css=1
 " 设置字典 ~/.vim/dict/文件的路径
 set complete+=k
 autocmd filetype python set dictionary=$VIMFILES/dict/python.dict
+autocmd filetype python set dictionary+=$VIMFILES/dict/word.dict
+
 autocmd filetype javascript set dictionary=$VIMFILES/dict/javascript.dict
 autocmd filetype javascript set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype javascript set dictionary+=$VIMFILES/dict/word.dict
+
 autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
+autocmd filetype php set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype php set dictionary+=$VIMFILES/dict/javascript.dict
+autocmd filetype php set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype php set dictionary=$VIMFILES/dict/word.dict
+
 autocmd filetype html set dictionary=$VIMFILES/dict/html.dict
 autocmd filetype html set dictionary+=$VIMFILES/dict/css.dict
 autocmd filetype html set dictionary+=$VIMFILES/dict/javascript.dict
 autocmd filetype html set dictionary+=$VIMFILES/dict/node.dict
-autocmd filetype css set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype html set dictionary+=$VIMFILES/dict/word.dict
 
-""autocmd filetype javascript set dictionary=~/.vim/dict/javascript.dict,~/.vim/dict/word.dict
-""autocmd filetype php set dictionary=~/.vim/dict/php.dict,~/.vim/dict/word.dict
-""autocmd filetype html set dictionary=~/.vim/dict/html.dict,~/.vim/dict/word.dict
-""autocmd filetype css set dictionary=~/.vim/dict/css.dict,~/.vim/dict/word.dict
-""autocmd filetype python set dictionary=~/.vim/dict/python.dict,~/.vim/dict/word.dict
+autocmd filetype css set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype css set dictionary+=$VIMFILES/dict/word.dict
 
 "自动补全插件-neocomplcache
 "let g:neocomplcache_enable_at_startup=1
@@ -620,3 +626,9 @@ let g:syntastic_style_error_symbol='↪'
 let g:syntastic_warning_symbol='↪'
 let g:syntastic_style_warning_symbol='↪'
 let g:syntastic_auto_jump=1
+
+nmap ct :TagbarToggle<CR>
+let g:tagbar_left=1
+let g:tagbar_width=30
+
+"let g:tagbar_ctags_bin='/usr/local/bin/ctags'
