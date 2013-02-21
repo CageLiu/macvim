@@ -613,6 +613,10 @@ inoremap µ 	<ESC>O
 nmap gt Gzt
 nmap gb Gzz
 
+"select all
+nmap gv ggVG
+vmap gv <ESC>ggVG
+
 "python语法错误着色
 if has("gui_running") 
 	highlight SpellBad term=underline gui=undercurl guisp=Black

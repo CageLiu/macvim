@@ -265,10 +265,10 @@ if &t_Co > 255
    hi Comment         ctermfg=236				
 
    "水平cursorline
-   hi CursorLine       			  ctermbg=232   cterm=none
+   hi CursorLine       			  ctermbg=233   cterm=bold
 
    "垂直cursorline
-   hi CursorColumn                ctermbg=232
+   hi CursorColumn                ctermbg=233
 
    hi LineNr          ctermfg=231 ctermbg=233
    hi NonText         ctermfg=250 ctermbg=234
