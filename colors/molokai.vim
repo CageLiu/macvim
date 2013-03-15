@@ -262,8 +262,7 @@ if &t_Co > 255
    hi Normal          ctermfg=247  ctermbg=16	cterm=none
 
    "注释
-   "hi Comment         ctermfg=236
-   hi Comment         ctermfg=72
+   hi Comment         ctermfg=240
 
    "水平cursorline
    hi CursorLine       			  ctermbg=233   cterm=bold
