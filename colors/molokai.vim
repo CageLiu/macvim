@@ -190,7 +190,7 @@ if &t_Co > 255
    hi SpecialKey      ctermfg=81
 
    "html匹配到的标签着色
-   hi MatchParen      ctermfg=231  ctermbg=125 cterm=bold,underline
+   hi MatchParen      ctermfg=255  ctermbg=6 cterm=bold
 
    hi ModeMsg         ctermfg=229
    hi MoreMsg         ctermfg=229
@@ -268,7 +268,7 @@ if &t_Co > 255
    hi CursorLine       			  ctermbg=233   cterm=bold
 
    "垂直cursorline
-   hi CursorColumn                ctermbg=233
+   hi CursorColumn    ctermbg=233
 
    hi LineNr          ctermfg=231 ctermbg=233
    hi NonText         ctermfg=250 ctermbg=234
