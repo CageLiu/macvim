@@ -210,13 +210,8 @@ autocmd filetype python set dictionary+=$VIMFILES/dict/word.dict
 
 autocmd filetype javascript set dictionary=$VIMFILES/dict/javascript.dict
 autocmd filetype javascript set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype javascript set dictionary+=$VIMFILES/dict/css.dict
 autocmd filetype javascript set dictionary+=$VIMFILES/dict/word.dict
-
-autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
-autocmd filetype php set dictionary+=$VIMFILES/dict/css.dict
-autocmd filetype php set dictionary+=$VIMFILES/dict/javascript.dict
-autocmd filetype php set dictionary+=$VIMFILES/dict/node.dict
-autocmd filetype php set dictionary=$VIMFILES/dict/word.dict
 
 autocmd filetype html set dictionary=$VIMFILES/dict/html.dict
 autocmd filetype html set dictionary+=$VIMFILES/dict/css.dict
@@ -225,7 +220,18 @@ autocmd filetype html set dictionary+=$VIMFILES/dict/node.dict
 autocmd filetype html set dictionary+=$VIMFILES/dict/word.dict
 
 autocmd filetype css set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype css set dictionary+=$VIMFILES/dict/html.dict
 autocmd filetype css set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype less set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype less set dictionary+=$VIMFILES/dict/html.dict
+autocmd filetype less set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
+autocmd filetype php set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype php set dictionary+=$VIMFILES/dict/javascript.dict
+autocmd filetype php set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype php set dictionary=$VIMFILES/dict/word.dict
 
 "自动补全插件-neocomplcache
 "let g:neocomplcache_enable_at_startup=1
@@ -516,7 +522,9 @@ inoremap <silent> <F5> <CR><ESC>k:r! date \+\%F\ \%T<CR>kJJa
 "let g:vimim_mode='static'
 "let g:vimim_map='c-bslash'
 let g:vimim_cloud='qq.fuzzy'
-"let g:vimim_cloud='sougo'
+"let g:vimim_cloud='sogou'
+"let g:vimim_cloud='baidu'
+"let g:vimim_cloud='google'
 let g:vimim_map='no-gi'
 "let g:vimim_cloud='sogou'
 
