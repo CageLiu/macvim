@@ -554,6 +554,7 @@ nmap ≥ $V\5
 
 "展开折叠 Option-r
 nmap ® zR
+nmap mr zR
 
 "插入模式左移光标 Option-b
 inoremap ∫ <left>
