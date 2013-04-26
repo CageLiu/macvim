@@ -80,6 +80,10 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 
+"对just文件使用html语法高亮
+au BufNewFile,BufRead *.just set filetype=html
+au BufNewFile,BufRead *.less set filetype=css
+
 "在状态栏显示目前所执行的指令，未完成的指令片段也会显示出来
 set showcmd
 
@@ -550,7 +554,6 @@ vmap ≤  $\5
 
 "选中标签 Option->
 nmap ≥ $V\5
-
 
 "展开折叠 Option-r
 nmap ® zR
