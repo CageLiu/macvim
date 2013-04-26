@@ -82,6 +82,7 @@ filetype plugin indent on
 
 "对just文件使用html语法高亮
 au BufNewFile,BufRead *.just set filetype=html
+au BufNewFile,BufRead *.jade set filetype=html
 au BufNewFile,BufRead *.less set filetype=css
 
 "在状态栏显示目前所执行的指令，未完成的指令片段也会显示出来
