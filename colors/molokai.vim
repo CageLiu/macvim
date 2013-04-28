@@ -270,6 +270,9 @@ if &t_Co > 255
    "垂直cursorline
    hi CursorColumn    ctermbg=233
 
+   "代码宽度线颜色
+   hi colorcolumn 	  ctermbg=235
+
    hi LineNr          ctermfg=231 ctermbg=233
    hi NonText         ctermfg=250 ctermbg=234
 end
