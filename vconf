@@ -655,4 +655,11 @@ let g:tagbar_width=30
 
 nmap mc :ToggleRaibowParenthesis<CR>
 
-set colorcolumn=80
+
+
+"为以下文件类型添加代码长度界限
+au BufRead,BufNewFile *.py set colorcolumn=80
+au BufRead,BufNewFile *.js set colorcolumn=80
+au BufRead,BufNewFile *.php set colorcolumn=80
+au BufRead,BufNewFile *.css set colorcolumn=80
+au BufRead,BufNewFile *.vim set colorcolumn=80
