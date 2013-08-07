@@ -525,14 +525,18 @@ let g:vimim_map='no-gi'
 "let g:vimim_cloud='sogou'
 
 "窗口切换
-nmap ˙    <c-w>h
-"nmap <c-h> <c-w>h
-nmap  ∆		<c-w>j
-"nmap <c-j> <c-w>j
-nmap  ˚	<c-w>k
-"nmap <c-k> <c-w>k
-nmap ¬     <c-w>l
-"nmap <c-l> <c-w>l
+"nmap <c-h> <c-w>h option-h
+nmap <c-h> <c-w>h
+"nmap ˙    <c-w>h
+"nmap <c-j> <c-w>j option-j
+nmap <c-j> <c-w>j
+"nmap  ∆		<c-w>j
+"nmap <c-k> <c-w>k option-k 
+nmap <c-k> <c-w>k
+"nmap  ˚	<c-w>k
+"nmap <c-l> <c-w>l option-l
+nmap <c-l> <c-w>l
+"nmap ¬     <c-w>l
 
 "在下方复制整个元素Option-o
 nmap ø  ≥yP≤j
@@ -565,7 +569,6 @@ inoremap ˚ <up>
 
 "插入模式下移光标 Option-j
 inoremap ∆ <down>
-
 
 
 "到行首Option-q
@@ -601,18 +604,22 @@ nmap º )
 vmap º )
 
 "下翻半屏Option-x
+nmap ∆ <c-d>
+vmap ∆ <c-d>
 nmap ≈ <c-d>
 vmap ≈ <c-d>
 
 "上翻半屏Option-m
+nmap ˚ <c-u>
+vmap ˚ <c-u>
 nmap µ 	<c-u>
 vmap µ 	<c-u>
 
-"上一行进入插入模式 Option-x
-inoremap ≈ <ESC>o
+"下一行进入插入模式 Option-x
+inoremap ≈ <ESC>O
 
 "下一行进入插入模式 Option-m
-inoremap µ 	<ESC>O
+inoremap µ 	<ESC>o
 
 nmap gt Gzt
 nmap gb Gzz
