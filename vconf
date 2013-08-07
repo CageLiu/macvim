@@ -606,14 +606,14 @@ vmap º )
 "下翻半屏Option-x
 nmap ∆ <c-d>
 vmap ∆ <c-d>
-nmap ≈ <c-d>
-vmap ≈ <c-d>
+nmap ≈ <c-f>
+vmap ≈ <c-f>
 
 "上翻半屏Option-m
 nmap ˚ <c-u>
 vmap ˚ <c-u>
-nmap µ 	<c-u>
-vmap µ 	<c-u>
+nmap µ 	<c-b>
+vmap µ 	<c-b>
 
 "下一行进入插入模式 Option-x
 inoremap ≈ <ESC>O
