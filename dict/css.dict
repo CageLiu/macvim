@@ -215,3 +215,7 @@ font-variant
 column-width
 column-count
 columns
+
+lighten
+mixin
+include

@@ -82,7 +82,6 @@ filetype plugin indent on
 "对just文件使用html语法高亮
 au BufNewFile,BufRead *.just set filetype=html
 au BufNewFile,BufRead *.jade set filetype=html
-au BufNewFile,BufRead *.less set filetype=css
 
 "在状态栏显示目前所执行的指令，未完成的指令片段也会显示出来
 set showcmd
@@ -229,6 +228,10 @@ autocmd filetype css set dictionary+=$VIMFILES/dict/word.dict
 autocmd filetype less set dictionary=$VIMFILES/dict/css.dict
 autocmd filetype less set dictionary+=$VIMFILES/dict/html.dict
 autocmd filetype less set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype scss.css set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype scss.css set dictionary+=$VIMFILES/dict/html.dict
+autocmd filetype scss.css set dictionary+=$VIMFILES/dict/word.dict
 
 autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
 autocmd filetype php set dictionary+=$VIMFILES/dict/css.dict
@@ -627,6 +630,9 @@ nmap gb Gzz
 "select all
 nmap gv ggVG
 vmap gv <ESC>ggVG
+
+nmap gu Vgu
+nmap gU VgU
 
 "python语法错误着色
 if has("gui_running") 
