@@ -1,5 +1,6 @@
 " Vim color file
 "
+"
 " Author: Tomas Restrepo <tomas@winterdom.com>
 "
 " Note: Based on the monokai theme for textmate
@@ -231,9 +232,11 @@ if &t_Co > 255
    "hi Statement       ctermfg=25               cterm=bold
 
    "状态栏
-   hi StatusLine      ctermfg=238 ctermbg=253
+   "hi StatusLine      ctermfg=238 ctermbg=253
+   hi StatusLine      ctermfg=250 ctermbg=17
 
-   hi StatusLineNC    ctermfg=244 ctermbg=232
+   "hi StatusLineNC    ctermfg=244 ctermbg=232
+   hi StatusLineNC    ctermfg=235 ctermbg=242
 
    "CSS属性名
    hi StorageClass    ctermfg=61				cterm=none

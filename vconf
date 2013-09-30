@@ -158,6 +158,9 @@ inoremap ' ''<ESC>i
 "字典补全
 inoremap <c-k> <C-X><C-K>
 
+"补全全行
+inoremap <c-l> <C-X><C-L>
+
 "文件补全
 inoremap <c-f> <C-X><C-F>
 
@@ -201,6 +204,8 @@ endf
 set laststatus=2
 
 "状态栏显示的信息 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
+set statusline=\ %<%F[%1*%*%n%R%H]%M%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l[%p%%]\|%L%)
+"%c:%l\|%L%)
 
 " 让 Tohtml 产生有 CSS 语法的 html
 let html_use_css=1
@@ -669,3 +674,15 @@ au BufRead,BufNewFile *.php set colorcolumn=100
 au BufRead,BufNewFile *.css set colorcolumn=100
 au BufRead,BufNewFile *.vim set colorcolumn=100
 au BufRead,BufNewFile *.less set colorcolumn=100
+
+nmap yii yi"
+nmap yiI yi'
+
+nmap cii ci"
+nmap ciI ci'
+
+nmap dii di"
+nmap diI di'
+
+nmap vii vi"
+nmap viI vi'
