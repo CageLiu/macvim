@@ -109,8 +109,8 @@ instructions '<?....?>'. Thus typing these result in no expansion.
 plugins to use. By default this is the backslash key `\'. See |mapleader|
 for details.
 
-;;              make element out previous word and close it         {{{2
-          - when typing a word;; wil create <word>|</word>
+<c-;>              make element out previous word and close it         {{{2
+          - when typing a word<c-;> wil create <word>|</word>
 						when word on its own line it will be
 						<word>
                |

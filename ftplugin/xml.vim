@@ -157,7 +157,7 @@ let b:html_mode =((&filetype =~ 'x\?html') && !exists("g:xml_no_html"))
 let b:haveAtt = 0
 let b:lastTag = ""
 let b:lastAtt = ""
-let b:suffix = (exists('g:makeElementSuf') ? g:makeElementSuf : ';;')
+let b:suffix = (exists('g:makeElementSuf') ? g:makeElementSuf : '<c-;>')
 let b:xml_use_xhtml = 0
 if exists('g:xml_use_xhtml')
 	let b:xml_use_xhtml = g:xml_use_xhtml
@@ -1651,8 +1651,8 @@ instructions '<?....?>'. Thus typing these result in no expansion.
 plugins to use. By default this is the backslash key `\'. See |mapleader|
 for details.
 
-;;              make element out previous word and close it         {{{2
-          - when typing a word;; wil create <word>|</word>
+<c-;>              make element out previous word and close it         {{{2
+          - when typing a word<c-;> wil create <word>|</word>
 						when word on its own line it will be
 						<word>
                |
