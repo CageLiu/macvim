@@ -620,13 +620,14 @@ vmap ∆ <c-d>
 nmap ≈ <c-f>
 vmap ≈ <c-f>
 
+
 "上翻半屏Option-m
 nmap ˚ <c-u>
 vmap ˚ <c-u>
 nmap µ 	<c-b>
 vmap µ 	<c-b>
 
-"下一行进入插入模式 Option-x
+"上一行进入插入模式 Option-x
 inoremap ≈ <ESC>O
 
 "下一行进入插入模式 Option-m
