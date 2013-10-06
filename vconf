@@ -614,16 +614,20 @@ vmap ª (
 nmap º )
 vmap º )
 
-"下翻半屏Option-x
+"下翻半屏Option-f
 nmap ∆ <c-d>
 vmap ∆ <c-d>
+
+"下翻半屏Option-x
 nmap ≈ <c-f>
 vmap ≈ <c-f>
 
 
-"上翻半屏Option-m
+"上翻半屏Option-k
 nmap ˚ <c-u>
 vmap ˚ <c-u>
+
+"上翻半屏Option-m
 nmap µ 	<c-b>
 vmap µ 	<c-b>
 
