@@ -3,17 +3,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,latin1
 
-"处理菜单及右键菜单乱码 
-source $VIMRUNTIME/delmenu.vim 
-source $VIMRUNTIME/menu.vim 
-
-"配置vim文件主目录
-if has("unix")
-	let $VIMFILES=$HOME."/.vim"
-else
-	let $VIMFILES=$VIM."/vimfiles"
-endif
-
 "处理consle输出乱码 
 language messages zh_CN.utf-8
 
@@ -174,7 +163,7 @@ nmap <s-up> <c-w>+5<c-w>+5<ESC>
 nmap <s-down> <c-w>-5<c-w>-5<ESC>
 nmap <s-left> <c-w>>5<c-w>>5<ESC>
 nmap <s-right> <c-w><5<c-w><5<ESC>
-nmap <s-m> <c-w>>2000<c-w>>2000<ESC>
+nmap <s-m> <c-w>>2000<c-w>>2000<c-w>+2000<c-w>+2000<ESC>
 
 nmap <silent> <F1> <c-w>>5<c-w>>5<ESC>
 nmap <silent> <F2> <c-w><5<c-w><5<ESC>
