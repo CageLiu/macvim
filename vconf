@@ -3,6 +3,13 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,latin1
 
+"配置vim文件主目录
+if has("unix")
+	let $VIMFILES=$HOME."/.vim"
+else
+	let $VIMFILES=$VIM."/vimfiles"
+endif
+
 "处理consle输出乱码 
 language messages zh_CN.utf-8
 
