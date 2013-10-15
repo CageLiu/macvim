@@ -278,4 +278,11 @@ if &t_Co > 255
 
    hi LineNr          ctermfg=231 ctermbg=233
    hi NonText         ctermfg=250 ctermbg=234
+
+   hi MBENormal                ctermfg=240
+   hi MBEChanged               ctermfg=60
+   hi MBEVisibleNormal         ctermfg=250
+   hi MBEVisibleChanged        ctermfg=81
+   hi MBEVisibleActiveNormal   ctermfg=202
+   hi MBEVisibleActiveChanged  ctermfg=219
 end

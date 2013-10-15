@@ -550,12 +550,12 @@ function! <SID>RenderSyntax()
 
     if !exists("g:did_minibufexplorer_syntax_inits")
       let g:did_minibufexplorer_syntax_inits = 1
-      hi def link MBENormal                Comment
-      hi def link MBEChanged               String
-      hi def link MBEVisibleNormal         Special
-      hi def link MBEVisibleChanged        Special
-      hi def link MBEVisibleActiveNormal   Underlined
-      hi def link MBEVisibleActiveChanged  Error
+      hi def link MBENormal                MBENormal
+      hi def link MBEChanged               MBEChanged
+      hi def link MBEVisibleNormal         MBEVisibleNormal
+      hi def link MBEVisibleChanged        MBEVisibleChanged
+      hi def link MBEVisibleActiveNormal   MBEVisibleActiveNormal
+      hi def link MBEVisibleActiveChanged  MBEVisibleActiveChanged
     endif
 
     let b:current_syntax = "minibufexpl"
