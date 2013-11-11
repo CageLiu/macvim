@@ -348,6 +348,7 @@ links
 loadOverlay
 localName
 location
+localStorage
 locationbar
 log
 logicalXDPI
@@ -926,3 +927,6 @@ easeInOutBack
 easeInBounce
 easeOutBounce
 easeInOutBounce
+
+setItem
+getItem
