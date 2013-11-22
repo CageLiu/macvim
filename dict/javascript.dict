@@ -930,3 +930,11 @@ easeInOutBounce
 
 setItem
 getItem
+
+angular
+config
+http
+scope
+routeProvider
+templateUrl
+otherwise
