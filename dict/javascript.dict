@@ -938,3 +938,5 @@ scope
 routeProvider
 templateUrl
 otherwise
+redirectTo
+directive
