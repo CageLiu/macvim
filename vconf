@@ -20,7 +20,27 @@ set ambiwidth=double
 set nocompatible
 
 "配色方案
-color molokai
+"dark===
+"color molokai
+"color d_baycomb
+"color d_maroloccio
+"color d_maroloccio2
+"color d_midnightmoonlight
+"ok
+"color maroloccio2
+color paintbox
+
+"light
+"color lucius
+"color l_earendel
+"color l_eclipse
+"color l_emacs
+"color l_guardian
+"color l_habiLight
+"color l_njk
+"color l_tolerable
+"color l_vylight
+
 
 "pathogen
 "call pathogen#infect()
@@ -69,6 +89,9 @@ set shiftwidth=4
 
 "设置自动缩进
 "set autoindent
+"set cindent
+"set nosmartindent
+"set noautoindent
 
 "自动识别文件类型
 filetype on
@@ -141,6 +164,15 @@ let b:javascript_fold=1
 "命令行补全
 set wildmenu
 
+"实现括号的自动配对后防止重复输入），适用python
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endf
+
 "自动括号补全
 inoremap ( ()<ESC>i
 inoremap ) <c-r>=ClosePair(')')<CR>
@@ -186,15 +218,6 @@ vmap k gk
 "复制粘贴
 vmap <c-y> "+y
 nmap <c-p> "+p
-
-"实现括号的自动配对后防止重复输入），适用python
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endf
 
 "显示状态栏
 set laststatus=2
