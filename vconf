@@ -21,14 +21,17 @@ set nocompatible
 
 "配色方案
 "dark===
-"color molokai
+color molokai
 "color d_baycomb
 "color d_maroloccio
 "color d_maroloccio2
 "color d_midnightmoonlight
 "ok
 "color maroloccio2
-color paintbox
+"
+"------------"
+"color paintbox
+"------------"
 
 "light
 "color lucius
@@ -40,6 +43,9 @@ color paintbox
 "color l_njk
 "color l_tolerable
 "color l_vylight
+"color peaksea
+"color busybee
+"color midnightmoonlight
 
 
 "pathogen
@@ -271,6 +277,9 @@ autocmd filetype php set dictionary=$VIMFILES/dict/word.dict
 
 "jquery插件
 au BufRead,BufNewFile *.js set filetype=javascript syntax=jquery
+
+"ejs
+au BufRead,BufNewFile *.ejs set filetype=html syntax=html
 
 "命令行高度
 set cmdheight=1

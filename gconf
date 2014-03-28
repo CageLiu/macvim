@@ -21,8 +21,9 @@ autocmd! bufwritepost .gvimrc source %
 
 
 "配色方案
-color molokai
-"color lucius
+"color molokai
+color lucius
+"color peaksea
 "set guifont=DejaVu\ Sans\ Mono\ 10
 set guifont=文泉驿等宽正黑\ 11
 
