@@ -21,7 +21,7 @@ set nocompatible
 
 "配色方案
 "dark===
-color molokai
+"color molokai
 "color d_baycomb
 "color d_maroloccio
 "color d_maroloccio2
@@ -34,6 +34,7 @@ color molokai
 "------------"
 
 "light
+color cage
 "color lucius
 "color l_earendel
 "color l_eclipse
@@ -86,8 +87,59 @@ nnoremap <silent> <F3> :Grep<CR>
 "tab宽度为四个字符
 set tabstop=4
 
-"python时自动将tab缩进转换为空格
-au BufRead,BufNewFile *.py set filetype=python expandtab
+
+autocmd filetype python 				set dictionary=$VIMFILES/dict/python.dict
+autocmd filetype python 				set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype javascript 			set dictionary=$VIMFILES/dict/javascript.dict
+autocmd filetype javascript 			set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype javascript 			set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype javascript 			set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype html 					set dictionary=$VIMFILES/dict/html.dict
+autocmd filetype html 					set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype html 					set dictionary+=$VIMFILES/dict/javascript.dict
+autocmd filetype html 					set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype html 					set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype css 					set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype css 					set dictionary+=$VIMFILES/dict/html.dict
+autocmd filetype css 					set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype less 					set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype less 					set dictionary+=$VIMFILES/dict/html.dict
+autocmd filetype less 					set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype scss.css 				set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype scss.css 				set dictionary+=$VIMFILES/dict/html.dict
+autocmd filetype scss.css 				set dictionary+=$VIMFILES/dict/word.dict
+autocmd filetype sass.css 				set dictionary=$VIMFILES/dict/css.dict
+autocmd filetype sass.css 				set dictionary+=$VIMFILES/dict/html.dict
+autocmd filetype sass.css 				set dictionary+=$VIMFILES/dict/word.dict
+
+autocmd filetype php 					set dictionary=$VIMFILES/dict/php.dict
+autocmd filetype php 					set dictionary+=$VIMFILES/dict/css.dict
+autocmd filetype php 					set dictionary+=$VIMFILES/dict/javascript.dict
+autocmd filetype php 					set dictionary+=$VIMFILES/dict/node.dict
+autocmd filetype php 					set dictionary=$VIMFILES/dict/word.dict
+
+
+
+"以下文件格式时自动将tab缩进转换为空格
+"all
+set expandtab
+"au BufRead,BufNewFile *.py set filetype=python expandtab
+"au BufRead,BufNewFile *.js set filetype=javascript expandtab
+"au BufRead,BufNewFile *.css set filetype=css expandtab
+"au BufRead,BufNewFile *.less set filetype=less expandtab
+"au BufRead,BufNewFile *.scss set filetype=scss expandtab
+"au BufRead,BufNewFile *.scss set filetype=scss.css expandtab
+"au BufRead,BufNewFile *.sass set filetype=sass expandtab
+"au BufRead,BufNewFile *.sass set filetype=sass.css expandtab
+
+
+
+
 
 "开启新行时自动智能缩进
 set smartindent
@@ -703,12 +755,12 @@ let g:tagbar_width=30
 "nmap mc :ToggleRaibowParenthesis<CR>
 
 "为以下文件类型添加代码长度界限
-au BufRead,BufNewFile *.py 		set colorcolumn=100
-au BufRead,BufNewFile *.js 		set colorcolumn=100
-au BufRead,BufNewFile *.php 	set colorcolumn=100
-au BufRead,BufNewFile *.css 	set colorcolumn=100
-au BufRead,BufNewFile *.vim 	set colorcolumn=100
-au BufRead,BufNewFile *.less 	set colorcolumn=100
+au BufRead,BufNewFile *.py 		set colorcolumn=120
+au BufRead,BufNewFile *.js 		set colorcolumn=120
+au BufRead,BufNewFile *.php 	set colorcolumn=120
+au BufRead,BufNewFile *.css 	set colorcolumn=120
+au BufRead,BufNewFile *.vim 	set colorcolumn=120
+au BufRead,BufNewFile *.less 	set colorcolumn=120
 
 nmap yii yi"
 nmap yiI yi'

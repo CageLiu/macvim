@@ -1228,7 +1228,7 @@ let s:zen_settings = {
 \            'meta:win': [{'http-equiv': 'Content-Type'}, {'content': 'text/html;charset=Win-1251'}],
 \            'meta:compat': [{'http-equiv': 'X-UA-Compatible'}, {'content': 'IE=7'}],
 \            'style': {'type': 'text/css'},
-\            'script': {'type': 'text/javascript'},
+\            'script': {'src': ''},
 \            'script:src': [{'type': 'text/javascript'}, {'src': ''}],
 \            'img': [{'src': ''}, {'alt': ''}],
 \            'iframe': [{'src': ''}, {'frameborder': '0'}],

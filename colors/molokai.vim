@@ -253,7 +253,7 @@ if &t_Co > 255
    hi Type            ctermfg=23               cterm=none
    "hi Type            ctermfg=23               cterm=bold
 
-   ""
+   "
    hi Underlined      ctermfg=244               cterm=none
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=none
