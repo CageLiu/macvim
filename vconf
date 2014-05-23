@@ -137,9 +137,8 @@ set expandtab
 "au BufRead,BufNewFile *.sass set filetype=sass expandtab
 "au BufRead,BufNewFile *.sass set filetype=sass.css expandtab
 
-
-
-
+"禁用声音提示
+set vb t_vb=
 
 "开启新行时自动智能缩进
 set smartindent

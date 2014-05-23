@@ -154,6 +154,7 @@ if &t_Co > 255
    hi VertSplit       ctermfg=245   ctermbg=235   cterm=none
 
    "hi VisualNOS                   ctermbg=238
+   "选中区域
    hi Visual          ctermfg=255   ctermbg=27
    "hi WarningMsg      ctermfg=231 ctermbg=238   cterm=none
    "hi WildMenu        ctermfg=239 ctermbg=16
