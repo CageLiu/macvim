@@ -401,6 +401,10 @@ nmap "+p :r !pbpaste<CR><CR>
 set cursorline
 set cursorcolumn
 
+"set list lcs=tab:\|\ 
+"let g:indentLine_color_term = 1
+"let g:indentLine_char = '┊'
+
 "文件在外部被修改时，自动加载
 set autoread
 
